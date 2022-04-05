@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+<body class="flex-column min-100-vh">
+    <header class="hero">
+    <h1 class="app-title"> Weather Dashboard</h1>
+    </header>
+   
+    <aside class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+    
+          <div class="card">
+            <h3 class="card-header text-uppercase">Search for a City</h3>
+            <form id="user-form" class="card-body">
+              <input name="City" id="City" type="text" autofocus="true" class="form-input" />
+              <button type="submit" id="search-btn">Get Weather</button>
+            </form>
+
+            <div class="Search-History"></div>
+        
+            //list of previous searches from internal storage
+          </div>
+
+    </aside>
+
+    <main class="row">
+      <div class="box col-md-8" id="currentConditions">
+        <h2>Current Conditions</h2>
+      </div>
+      <div class="box col-md-8" id="fiveDay">
+        <h2>5 Day Forecast</h2>
+      </div>
+       
+
+    </main>
+     
+
+         
+
+
+<script src="./assets/js/script.js"></script>    
+</body>
+</html>
