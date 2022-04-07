@@ -8,7 +8,14 @@ var searchTerm = $("#City");
 var userSearchTerm
 var currentConditions = $("#currentConditions");
 var APIKey = "ee12e1ef04df6690dc612b722669ba4a";
-var fiveDayForecast = $("#fiveDay")
+var fiveDayForecast = $("#fiveDay");
+var City = $("City");
+var Temp = $("Temp");
+var Wind = $("Wind");
+var Humidity = $("Humidity");
+var uvIndex = $("UV-Index");
+
+
 //var userSearchTerm = searchTerm.val();
 
 
@@ -24,8 +31,8 @@ submitBtn.on("click", function (event) {
 //var userSearchTerm = searchTerm.val();
 
 function weatherAPI(userSearchTerm){
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearchTerm + "&appid=" + APIKey;
-
+    //var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
 
     fetch(queryURL)
     
@@ -35,15 +42,27 @@ function weatherAPI(userSearchTerm){
     
         .then(function(data) {
             console.log(data)
-            document.domain.temp
-            //for (var i = 0; i < data.length; i++) {
-                //var listItem = document.currentConditions;
-               // listItem.textContent = data[i].main.temp.
-               // currentConditions.appendChild(listItem);
-              //  }
-              });
-          }
+            
+           var cityName = data.name
+           
 
-//weatherAPI(userSearchTerm)
+          
+          })
 
+}
 
+/*var queryURL2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
+
+function getLatLon(data) {
+    var lat = data.coord.lat
+    var lon = data.coord.lon
+}
+
+fetch(queryURL2)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data);
+
+    })*/
