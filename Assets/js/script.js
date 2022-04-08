@@ -14,6 +14,11 @@ var Temp = $("Temp");
 var Wind = $("Wind");
 var Humidity = $("Humidity");
 var uvIndex = $("UV-Index");
+var selectedCity = $("#City-Select");
+var currentTemp = $("#currentTemp");
+var currentWind = $("#currentWind");
+var currentHumid = $("#currentHumidity");
+var currentUVI = $("#currentUVI");
 
 
 //var userSearchTerm = searchTerm.val();
@@ -32,18 +37,22 @@ submitBtn.on("click", function (event) {
 
 function weatherAPI(userSearchTerm){
     //var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
 
     fetch(queryURL)
-    
        .then(function (response) {
             return response.json();
         })
-    
         .then(function(data) {
             console.log(data)
-            
-           var cityName = data.name
+                //console.log(data.name)
+            selectedCity.text(data.name);
+            currentTemp.text(data.main.temp);
+            currentWind.text(data.main.wind_speed);
+            currentHumid.text(data.main.humidity);
+
+
+           //var cityName = 
            
 
           

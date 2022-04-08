@@ -5,13 +5,22 @@
     margin-bottom: 2px;
 }
 
-.main {
+.current {
     font-weight: bolder;
     border: 2px;
     border-color: black;
+    border-style: double;
 }
 
-.aside {
+.aside  {
     border: 2px;
     border-color: black;
+    border-style: double;
+
+}
+
+.FiveDay {
+    border: 2px;
+    border-color: black;
+    border-style: 
 }
