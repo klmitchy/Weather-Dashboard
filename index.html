@@ -16,25 +16,36 @@
     <h1 class="app-title"> Weather Dashboard</h1>
     </header>
    
-    <aside class="aside" class="flex-row justify-space-between" >
-        <div class="col-12 col-md-4">
-    
-          <div class="card">
+    <aside class="aside"  >
+        <div class=".col-4">
+          <div class="card" style="width: 22rem;" >
             <h3 class="card-header text-uppercase">Search for a City</h3>
             <form id="user-form" class="card-body">
-              <input name="City" id="City" type="text" autofocus="true" class="form-input" />
+              <input name="City" id="userCity" type="text" autofocus="true" class="form-input" />
               <button type="submit" id="search-btn">Get Weather</button>
             </form>
 
-            <div class="Search-History"></div>
+            <!-- <div class="Search-History">
+              <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                  The current button
+                </button>
+                <button type="button" class="list-group-item list-group-item-action">A second item</button>
+                <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+                <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+                <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+              </div>  -->
+            </div>
         
             //list of previous searches from internal storage
           </div>
 
-    </aside>
+          
 
-    <main class= "current" class="row">
-      <div class="box col-md-8" id="currentConditions">
+    </aside>
+   
+    <main class>
+      <div class id="currentConditions .col-8" >
         <h2>Current Conditions</h2>
         <p id="City-Select"></p>
         <p id="currentTemp"></p>
@@ -43,10 +54,10 @@
         <p id="currentUVI"></p>
       </div>
 
-      <div class= "FiveDay" box col-md-8" id="fiveDay">
+      <div class= "FiveDay box col-md-8" id="fiveDay">
         <h2>5 Day Forcast</h2>
         <div class="card-deck col-8 col-md-10"></div>
-              <div class="card ntext-white bg-secondary" id = "day1">
+              <div class="card text-white bg-secondary" id = "day1">
                 <h4 class="card-text" id="date1"></h4>
                 <img id="icon1"></img>
                 <p id="temp1"></p>

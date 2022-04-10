@@ -9,18 +9,26 @@
     font-weight: bolder;
     border: 2px;
     border-color: black;
-    border-style: double;
+    border-style: solid;
+    margin: 2px;
 }
 
-.aside  {
+.card  {
     border: 2px;
     border-color: black;
-    border-style: double;
+    border-style: solid;
+    margin: 2px;
 
 }
 
 .FiveDay {
     border: 2px;
     border-color: black;
-    border-style: 
+    border-style: solid;
+    margin: 2px;
+}
+
+.Search-History {
+    flex-wrap: wrap;
+    
 }

@@ -4,7 +4,7 @@
 //fetch the api with input
 
 var submitBtn = $("#search-btn");
-var searchTerm = $("#City");
+var searchTerm = $("#userCity");
 var userSearchTerm
 var currentConditions = $("#currentConditions");
 var APIKey = "ee12e1ef04df6690dc612b722669ba4a";
@@ -47,20 +47,16 @@ function weatherAPI(userSearchTerm){
             console.log(data)
                 //console.log(data.name)
             selectedCity.text(data.name);
-            currentTemp.text(data.main.temp);
-            currentWind.text(data.main.wind_speed);
-            currentHumid.text(data.main.humidity);
-
-
-           //var cityName = 
-           
-
+            currentTemp.text("Temp: " + data.main.temp);
+            currentWind.text("Wind: " + data.main.wind);
+            currentHumid.text("Humidity: " + data.main.humidity);
+            currentUVI.text("UV Index: " + data.main.current.uvi);
           
           })
 
 }
 
-/*var queryURL2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
+var queryURL2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}" + userSearchTerm + "&appid=" + APIKey + "&units=imperial";
 
 function getLatLon(data) {
     var lat = data.coord.lat
@@ -74,4 +70,4 @@ fetch(queryURL2)
     .then(function (data){
         console.log(data);
 
-    })*/
+    })
